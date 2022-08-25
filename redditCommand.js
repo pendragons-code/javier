@@ -15,7 +15,7 @@ module.exports = {
 		//res => response, req => request
 		//example array: let reddit = ["example-1", "example-2"]
 		//random selection if you have multiple, picks from array:  let subreddit = reddit[Math.floor(Math.random() * reddit.length)];
-		const embed = new EmbedBuilder;
+		const embed = new Discord.EmbedBuilder();
 		got.default(`https://www.reddit.com/r/${subreddit}/random/.json`)
 			.then(response => {
 				const [list] = JSON.parse(response.body); //response to json
